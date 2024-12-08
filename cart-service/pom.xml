@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.ttt</groupId>
-    <artifactId>item-service</artifactId>
+    <artifactId>cart-service</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -45,6 +45,17 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- hm-api -->
+        <dependency>
+            <groupId>com.ttt</groupId>
+            <artifactId>hm-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!--OK http 的依赖 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
         </dependency>
     </dependencies>
     <build>
