@@ -11,11 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Collection;
 import java.util.List;
 
-@FeignClient("item-service")
-public interface ItemClient {
-    @GetMapping("/items")
-    List<ItemDTO> queryItemByIds(@RequestParam("ids") Collection<Long> ids);
-
-    @PutMapping("/items/stock/deduct")
-    void deductStock(@RequestBody List<OrderDetailDTO> items);
+@FeignClient("user-service")
+public interface UserClient {
+    @PutMapping("/users/money/deduct")
+    void deductMoney(@RequestParam("pw") String pw,@RequestParam("amount") Integer amount);
 }
