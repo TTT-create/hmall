@@ -28,3 +28,18 @@ spring:
           uri: lb://pay-service
           predicates:
             - Path=/pay-orders/**
+      default-filters:
+        - AddRequestHeader=truth, anyone long-press like button will be rich
+        - PrintAny=1,2,3
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi
